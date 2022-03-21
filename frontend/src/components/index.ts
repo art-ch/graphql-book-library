@@ -1,3 +1,4 @@
+import AppBar from './AppBar';
 import BookCard from './BookCard';
 
-export { BookCard };
+export { BookCard, AppBar };
