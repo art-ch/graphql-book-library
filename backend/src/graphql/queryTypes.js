@@ -27,6 +27,9 @@ const BookType = new GraphQLObjectType({
   fields: () => ({
     id: { type: GraphQLNonNull(GraphQLInt) },
     name: { type: GraphQLNonNull(GraphQLString) },
+    price: { type: GraphQLNonNull(GraphQLString) },
+    rating: { type: GraphQLNonNull(GraphQLString) },
+    reviews: { type: GraphQLNonNull(GraphQLString) },
     authorID: { type: GraphQLNonNull(GraphQLInt) },
     author: {
       type: AuthorType,
