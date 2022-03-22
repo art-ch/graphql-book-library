@@ -7,9 +7,9 @@ import { fetchData } from '../api';
 import { BOOKS_QUERY } from '../graphql/queries';
 
 const HomePage = () => {
-  const { data } = useQuery('data', () => fetchData(BOOKS_QUERY));
+  const { isLoading, data } = useQuery('books', () => fetchData(BOOKS_QUERY));
 
-  if (data) {
+  if (!isLoading) {
     return (
       <main>
         <Typography
